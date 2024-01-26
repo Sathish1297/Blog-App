@@ -1,0 +1,385 @@
+$lightgreen: #b9e7e7; 
+
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        // width: 1024px;
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+// Login and Register
+.auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $lightgreen;
+
+    h1{
+        font-size: 24px;
+        color: teal;
+        margin-bottom: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input{
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+        button{
+            padding: 10px;
+            background-color: teal;
+            cursor: pointer;
+            color: white;
+            border: none;
+        }
+        span{
+            display: flex;
+            text-align: center;
+            font-size: 12px;
+            gap: 5px;
+            margin-left: 7px;
+        }
+        p{
+            font-size: 12px;
+            color: red;
+            text-align: center;
+        }
+    }
+}
+
+// Navbar
+.navbar{
+    .container{
+        width: 1024px;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo{
+            img{
+                height: 100px;
+                width: 100px; 
+                border-radius: 50%;
+            }
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            h5{
+                font-weight:400;
+            }
+            span{
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .write{
+                background-color: $lightgreen;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 500;
+                border: 1px solid teal;
+
+                &:hover{
+                    color: teal;
+                    background-color: white;
+                    
+                }
+            }
+        }
+    }
+}
+
+//Footer
+.footer{
+    width: 1024px;
+    background-color: $lightgreen;
+    margin-top: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+    // span{
+
+    // }
+}
+
+//Home
+.home{
+    .posts{
+        width: 1024px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post{
+            display: flex;
+            gap: 70px;
+
+            &:nth-child(2n+1){
+                flex-direction: row-reverse;
+            }
+
+            .img{
+                flex: 1;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    background-color: $lightgreen;
+                    position: absolute;
+                    top: 20px;
+                    left: -20px;
+                    z-index: -1;
+                }
+
+                img{
+                    max-height: 400px;
+                    max-width: 400px;
+                    // width: 80%;
+                    object-fit: cover;
+                }
+            }
+
+            .content{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h1{
+                    font-size: 34px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                button{
+                    width: max-content;
+                    padding: 10px 20px;
+                    border: 1px solid teal;
+                    background-color: white;
+                    color: teal;
+
+                    &:hover{
+                        background-color: $lightgreen;
+                        color: black;
+                        border: 1px solid white;
+
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+//Single
+.single{
+    width: 1024px;
+    display: flex;
+    gap: 50px;
+
+    .content{
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 65%;
+
+        .user{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 30px 5px;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span{
+                font-weight: bold;
+            }
+            .edit{
+                margin-left: 30px;
+                display: flex;
+                gap: 10px;
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+        h1{
+            font-size: 36px;
+            color: #333;
+        }
+        p{
+            text-align: justify;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    .menu{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+
+        h1{
+            font-size: 16px;
+            color: #555;
+        }
+        .post{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            button{
+                width: max-content;
+                padding: 7.5px 10px;
+                border: 1px solid teal;
+                background-color: white;
+                color: teal;
+
+                &:hover{
+                    background-color: $lightgreen;
+                    color: black;
+                    border: 1px solid white;
+
+                }
+            }
+            h2{
+                color: #555;
+            }
+        }
+    }
+}
+
+//Write
+.add{
+    width: 1024px;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+
+    .content{
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input{
+            padding: 10px;
+            border: 1px solid lightgray;
+        }
+
+        .editorContainer{
+            height: 300px;
+            overflow: scroll;
+            border: 1px solid lightgray;
+            .editor{
+                height: 100%;
+                border: none;
+            }
+        }
+    }
+    .menu{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item{
+            border: 1px solid lightgray;
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #555;
+            font-size: 12px;
+            gap: 10px;
+            h1{
+                font-size: 18px;
+            }
+            .file{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+
+                :first-child{
+                    cursor: pointer;
+                    color: teal;
+                    background-color: white;
+                    border: 1px solid teal;
+                    padding: 3px 5px;  
+                }
+
+                :last-child{
+                    cursor: pointer;
+                    color: white;
+                    background-color: teal;
+                    border: 1px solid white;
+                    padding: 3px 5px;
+                }
+            }
+            .cat{
+                display: flex;
+                align-items: center;
+                color: teal;
+
+                label{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+    }  
+}
